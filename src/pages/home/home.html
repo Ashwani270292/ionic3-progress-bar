@@ -1,14 +1,33 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Result
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  {{charName1}}
+  <progress-bar [progress]="charcterstic1"></progress-bar>
+  {{charName2}}
+  <progress-bar [progress]="charcterstic2"></progress-bar>
+
+  {{charName3}}
+  <progress-bar [progress]="charcterstic3"></progress-bar>
+
+  {{charName4}}
+  <progress-bar [progress]="charcterstic4"></progress-bar>
+
+  {{charName5}}
+  <progress-bar [progress]="charcterstic5"></progress-bar>
+
+  <ion-toolbar style="background-color: white;">
+    <ion-title style="color: black;">What other people says...</ion-title>
+  </ion-toolbar>
+
+  <ion-list no-padding>
+    <button ion-item *ngFor="let item of dataList" style= "font-style: italic;"  detail-none>
+      {{ item }}
+    </button>
+  </ion-list>
 </ion-content>
